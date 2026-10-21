@@ -1,9 +1,29 @@
 # Travel Fare Calculator
 FARE_RATE = 14
 
-name = input("Enter passenger name: ")
-distance = float(input("Enter distance (km): "))
-passengers = int(input("Enter number of passengers: "))
+while True:
+    name = input("Enter passenger name: ")
+
+    if name.strip() != "":
+        break
+    else:
+        print("invalid name please try again")
+
+while True:
+    distance = float(input("Enter distance (km): "))
+
+    if 1 <= distance:
+        break
+    else:
+        print("use a valid number")
+
+while True:
+    passengers = int(input("Enter number of passengers: "))
+
+    if 0 <= passengers:
+        break
+    else:
+        print("use a positive integer")
 
 total_fare = distance * FARE_RATE * passengers
 
